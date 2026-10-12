@@ -44,7 +44,8 @@ describe('Object literal smoke', () => {
       left: 0,
       height: 297,
       top: 0,
-      objects: []
+      objects: [],
+      rawResources: {}
     };
     expect(page.width).toBe(210);
   });
