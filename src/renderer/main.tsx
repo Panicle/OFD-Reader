@@ -1,9 +1,6 @@
 import { createRoot } from 'react-dom/client';
+import App from './App';
+import './styles.css';
 
 const root = createRoot(document.getElementById('root')!);
-root.render(
-  <div style={{ fontFamily: 'system-ui', padding: 16 }}>
-    <h1>OFD Reader</h1>
-    <p>Loading...</p>
-  </div>
-);
+root.render(<App />);
