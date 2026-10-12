@@ -24,7 +24,7 @@ describe('exportDocumentToPdf', () => {
   it('produces a non-empty PDF buffer', async () => {
     const bytes = await exportDocumentToPdf(doc, '/tmp/out-test-1.pdf');
     expect(bytes.length).toBeGreaterThan(100);
-    expect(bytes.slice(0, 4).toString()).toBe('%PDF');
+    expect(Buffer.from(bytes.slice(0, 4)).toString('utf-8')).toBe('%PDF');
   });
 
   it('produces a valid PDF parseable by pdf-lib', async () => {
