@@ -9,7 +9,8 @@
     "preview": "electron-vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "dist": "npm run build && electron-builder"
   },
   "dependencies": {
     "yauzl": "^3.1.3",

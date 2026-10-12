@@ -1,0 +1,11 @@
+appId: com.example.ofd-reader
+productName: OFD Reader
+directories:
+  buildResources: build
+  output: release
+mac:
+  target: dmg
+win:
+  target: nsis
+linux:
+  target: AppImage
