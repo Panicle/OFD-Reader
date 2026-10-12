@@ -42,4 +42,13 @@ describe('parseAbbreviatedData', () => {
   it('throws on unknown token', () => {
     expect(() => parseAbbreviatedData('X 0 0')).toThrow(/unknown path token/);
   });
+
+  it('skips A (arc) token and continues with next command', () => {
+    const cmds = parseAbbreviatedData('A 5 5 0 0 1 200 200 M 0 0 L 10 10 Z');
+    expect(cmds).toEqual([
+      { op: 'M', x: 0, y: 0 },
+      { op: 'L', x: 10, y: 10 },
+      { op: 'Z' }
+    ]);
+  });
 });

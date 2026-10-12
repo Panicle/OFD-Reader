@@ -30,7 +30,7 @@ export function parseAbbreviatedData(input: string): PathCommand[] {
         }); i++; break;
       case 'A':
         // Arc — 7 params: rx ry angle large-arc-flag sweep-flag x y. v1 skips.
-        i += 7; break;
+        i += 8; break;
       case 'Z':
         out.push({ op: 'Z' }); i++; break;
     }
